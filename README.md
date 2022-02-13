@@ -73,7 +73,7 @@ Commit settings exists of an array containing differenc configuration for differ
 | validation | `string`   | Regex where commit message will be tested against        |
 | examples   | `string[]` | Will be printed out in the console when validation fails |
 
-// How the default commit message settings look like
+How the default commit message settings look like
 
 ```json
 {
