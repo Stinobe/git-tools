@@ -22,7 +22,7 @@ Add `precommit` and `prepublish` scripts in `package.json`
 npm set-script precommit "stinobe-commit-message"
 
 # Set script for branches
-npm set-script prepush "stinobe-validate-branch-name"
+npm set-script prepush "stinobe-branch-name"
 ```
 
 **If Husky not yet installed**
@@ -73,8 +73,9 @@ Commit settings exists of an array containing differenc configuration for differ
 | validation | `string`   | Regex where commit message will be tested against        |
 | examples   | `string[]` | Will be printed out in the console when validation fails |
 
-```json
 // How the default commit message settings look like
+
+```json
 {
   "commits": [
     {
@@ -94,9 +95,7 @@ Commit settings exists of an array containing differenc configuration for differ
       ]
     }
   ],
-  "branches": {
-    // ...
-  }
+  "branches": {}
 }
 ```
 
@@ -109,12 +108,11 @@ Commit settings exists of an array containing differenc configuration for differ
 | validation | `string[]` | List of regular expressions with allowed branch names            |
 | examples   | `string[]` | List of example branch names, will be logged if validation fails |
 
+How the default branch name settings look like
+
 ```json
-// How the default branch name settings look like
 {
-  "commit": [
-    // ...
-  ],
+  "commit": [],
   "branches": {
     "validation": [
       "^(feature|bug|docs|hotfix)/(\\d+)-[a-z-]+",
