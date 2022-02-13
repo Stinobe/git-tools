@@ -1,0 +1,26 @@
+name: Prepare for release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/**"
+
+jobs:
+  prepare:
+    name: Prepare release
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout code"
+        uses: "actions/checkout@v2"
+      - name: "Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@master"
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        with:
+          major-wording: "MAJOR,Major"
+          minor-wording: "resolve,resolves,resolved,Resolve,Resolves,Resolved,close,closes,closed,Close,Closes,Closed"
+          patch-wording: "fix,fixes,fixed,Fix,Fixes,Fixed"
+          tag-prefix: "v"
+          commit-message: ":bookmark: Set version {{version}}"
