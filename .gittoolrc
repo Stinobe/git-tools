@@ -1,0 +1,35 @@
+{
+  "commits": [
+    {
+      "branches": "^(feature|bug|docs|hotfix)",
+      "validation": "^(Close[s|d]?|Fix(e[s|d])?|Resolve[s|d]?) #[1-9]+\\d*: \\w+",
+      "examples": [
+        "Commit message starts with one of:",
+        "\tClose #[issue-number]: [description]",
+        "\tCloses #[issue-number]: [description]",
+        "\tClosed #[issue-number]: [description]",
+        "\tFix #[issue-number]: [description]",
+        "\tFixes #[issue-number]: [description]",
+        "\tFixed #[issue-number]: [description]",
+        "\tResolve #[issue-number]: [description]",
+        "\tResolves #[issue-number]: [description]",
+        "\tResolved #[issue-number]: [description]"
+      ]
+    }
+  ],
+  "branches": {
+    "validation": "^(feature|bug|docs|hotfix)\/(\\d+)-[a-z-]+",
+    "allowedList": [
+      "feature/[issue-number]-[subject]",
+      "bug/[issue-number]-[subject]",
+      "docs/[issue-number]-[subject]",
+      "hotfix/[issue-number]-[subject]"
+    ],
+    "ignore": [
+      "^WIP\/"
+    ],
+    "ignoreList": [
+      "WIP/*"
+    ]
+  }
+}

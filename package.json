@@ -1,0 +1,39 @@
+{
+  "name": "@stinobe/git-tools",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "prepare": "ts-patch install -s",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate-branch-name": "./lib/commits.js"
+  },
+  "bin": {
+    "stinobe-commit-message": "./lib/branch.js",
+    "stinobe-branch-name": "./lib/commits.js"
+  },
+  "keywords": [
+    "git",
+    "validator",
+    "commit",
+    "message",
+    "branch",
+    "name"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.9.0",
+    "ts-patch": "^2.0.1",
+    "typescript": "^4.5.5",
+    "typescript-transform-paths": "^3.3.1"
+  },
+  "dependencies": {
+    "ci-info": "^3.3.0"
+  }
+}
