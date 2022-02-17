@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 
+import log from "@util/log";
 import { isCI } from "ci-info";
 import { getCommitMessageExamples, getConfig, validateCommitConfig } from "@util/config";
-import log from "@util/log";
 import { isValidCommmitMessage } from "@util/validation";
 
 const validate = (): void => {

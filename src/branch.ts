@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
-import { getConfig, validateBranchConfig } from "@util/config";
 import log from "@util/log";
+import { getConfig, validateBranchConfig } from "@util/config";
 import { isValidBranchName } from "@util/validation";
 import { isCI } from "ci-info";
 
