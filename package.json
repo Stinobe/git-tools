@@ -23,7 +23,7 @@
     "name": "Stinobe",
     "url": "https://stino.be/"
   },
-  "repository": "github:stinodotbe/git-tools",
+  "repository": "github:stinobe/git-tools",
   "license": "none",
   "devDependencies": {
     "@types/node": "^17.0.17",
