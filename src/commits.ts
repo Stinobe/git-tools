@@ -6,14 +6,14 @@ import log from "@util/log";
 import { isValidCommmitMessage } from "@util/validation";
 
 const validate = (): void => {
-  const config = getConfig();
+  const config: GitToolConfig = getConfig();
+  const commitSettings: GitToolCommit[] = validateCommitConfig(config.commits);
   
-  const commitSettings = validateCommitConfig(config.commits);
   if (isValidCommmitMessage(commitSettings)) {
     log('Commit message validated');
   } else {
     log('Commit message is not valid', ...getCommitMessageExamples(commitSettings));
-    process.exit(1)
+    process.exit(1);
   }
 }
 
