@@ -6,8 +6,8 @@ import { isValidBranchName } from "@util/validation";
 import { isCI } from "ci-info";
 
 const validate = () => {
-  const config = getConfig();
-  const branchSettings = validateBranchConfig(config.branches);
+  const config: GitToolConfig = getConfig();
+  const branchSettings: GitToolBranch = validateBranchConfig(config.branches);
 
   if (isValidBranchName(branchSettings)) {
     log("Branch name is valid");

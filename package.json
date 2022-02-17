@@ -1,14 +1,11 @@
 {
   "name": "@stinobe/git-tools",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A tool to help validate commit messages before committing & branch names before pushing them.",
   "scripts": {
     "build": "rm -rf lib && tsc",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "prepare": "ts-patch install -s",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "validate-branch-name": "./lib/commits.js"
+    "prepare": "ts-patch install -s"
   },
   "bin": {
     "stinobe-commit-message": "./lib/branch.js",
@@ -22,11 +19,15 @@
     "branch",
     "name"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Stinobe",
+    "url": "https://stino.be/"
+  },
+  "repository": "github:stinodotbe/git-tools",
+  "license": "none",
   "devDependencies": {
     "@types/node": "^17.0.17",
-    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.11.0",
     "eslint": "^8.9.0",
     "ts-patch": "^2.0.1",
