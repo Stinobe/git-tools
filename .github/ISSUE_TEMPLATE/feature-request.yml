@@ -1,36 +1,36 @@
 name: "✨ Feature request"
 description: "Request a feature"
-title: "<title>",
+title: "<title>"
 labels: [enhancement]
 body:
-- type: checkboxes
-  attributes:
-    label: Is there an existing feature request for this issue?
-    description: Please search to see if an issue already exists for the feature request you encountered.
-    options:
-    - label: I have searched the existing issues
+  - type: checkboxes
+    attributes:
+      label: Is there an existing feature request for this issue?
+      description: Please search to see if an issue already exists for the feature request you encountered.
+      options:
+        - label: I have searched the existing issues
+          required: true
+  - type: checkboxes
+    attributes:
+      label: Will this feature help the majority of users
+      description: Is this feature a specific need for personal projects, or will it fix an issue for a lot of users
+      options:
+        - label: This feature will help out a lot of users
+          required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A concise description of what you expected to happen.
+      render: markdown
+    validations:
       required: true
-- type: checkboxes
-  attributes:
-    label: Will this feature help the majority of users
-    description: Is this feature a specific need for personal projects, or will it fix an issue for a lot of users
-    options:
-    - label: This feature will help out a lot of users
-      required: true
-- type: textarea
-  attributes:
-    label: Expected Behavior
-    description: A concise description of what you expected to happen.
-    render: markdown
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: Example configuration
-    value: |
+  - type: textarea
+    attributes:
+      label: Example configuration
+      value: |
         ```bash
         {}
         ```
-    render: markdown
-  validations:
-    required: false
+      render: markdown
+    validations:
+      required: false
