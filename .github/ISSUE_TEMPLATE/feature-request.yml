@@ -1,5 +1,5 @@
-name: ✨ Feature request
-description: Request a feature
+name: "✨ Feature request"
+description: "Request a feature"
 title: "<title>",
 labels: [enhancement]
 body:

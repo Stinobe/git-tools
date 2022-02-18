@@ -1,5 +1,5 @@
-name: 🐛 Bug
-description: File a bug / issue
+name: "🐛 Bug"
+description: "File a bug / issue"
 title: "<title>",
 labels: [bug]
 body:
