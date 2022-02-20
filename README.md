@@ -1,6 +1,6 @@
 # Git Helpers
 
-An tool to help validate commit messages before committing & branch names before pushing them.  
+A tool to help validate commit messages before committing & branch names before pushing them.  
 The tool will not run in CI thanks to [ci-info](https://www.npmjs.com/package/ci-info)
 
 > To be used with [Husky](https://typicode.github.io/husky/#/)
