@@ -1,6 +1,10 @@
 import { existsSync, lstatSync, readFileSync } from "fs";
 import { join } from "path";
 
+/**
+ * Find the git directory
+ * @returns {string} Git directory
+ */
 export const findGitDirectory = (): string => {
   // Default path to .git
   let path = join(process.cwd(), '.git');
