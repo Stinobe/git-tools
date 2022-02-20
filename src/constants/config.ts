@@ -1,8 +1,8 @@
 const defaultConfig: GitToolConfig = {
   "commits": [
     {
-      "branches": ".*",
-      "validation": "([Cc]lose[sd]?|[Ff]ix(e[sd])?|[Rr]esolve[sd]?) #[1-9]+\\d*",
+      "branches": /.*/,
+      "validation": /([Cc]lose[sd]?|[Ff]ix(e[sd])?|[Rr]esolve[sd]?) #[1-9]+\d*/,
       "examples": [
         "Commit message contains one of:",
         "\tclose #[issue-number]",
@@ -19,8 +19,8 @@ const defaultConfig: GitToolConfig = {
   ],
   "branches": {
     "validation": [
-      "^(feature|bug|docs|hotfix)/(\\d+)-[a-z-]+",
-      "^wip/[a-z1-9]+[a-z0-9]*"
+      /^(feature|bug|docs|hotfix)\/(\d+)-[a-z-]+/,
+      /^wip\/[a-z1-9]+[a-z0-9]*/
     ],
     "examples": [
       "feature/[issue_number]-[subject]",

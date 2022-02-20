@@ -4,7 +4,7 @@ type GitToolConfig = {
 }
 
 type GitToolBranch = {
-  validation?: string[];
+  validation?: RegExp[];
   examples?: GitToolExamples;
   ignore?: string[];
   ignoreExamples?: string[];
@@ -13,7 +13,7 @@ type GitToolBranch = {
 type GitToolExamples = string[];
 
 type GitToolCommit = {
-  branches?: string;
-  validation?: string;
+  branches?: RegExp;
+  validation?: RegExp;
   examples?: GitToolExamples;
 }
