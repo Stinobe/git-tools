@@ -1,6 +1,6 @@
 {
   "name": "@stinobe/git-tools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tool to help validate commit messages before committing & branch names before pushing them.",
   "scripts": {
     "build": "rm -rf lib && tsc",
