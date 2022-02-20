@@ -69,18 +69,18 @@ Commit settings exists of an array containing differenc configuration for differ
 
 | Property   | Type       | Description                                              |
 | ---------- | ---------- | -------------------------------------------------------- |
-| branches   | `string`   | Regex to check if rules apply on current branch          |
-| validation | `string`   | Regex where commit message will be tested against        |
+| branches   | `RegExp`   | Regex to check if rules apply on current branch          |
+| validation | `RegExp`   | Regex where commit message will be tested against        |
 | examples   | `string[]` | Will be printed out in the console when validation fails |
 
 How the default commit message settings look like
 
-```json
+```javascript
 {
   "commits": [
     {
-      "branches": ".*",
-      "validation": "([Cc]lose[sd]?|[Ff]ix(e[sd])?|[Rr]esolve[sd]?) #[1-9]+\\d*",
+      "branches": /.*/,
+      "validation": /([Cc]lose[sd]?|[Ff]ix(e[sd])?|[Rr]esolve[sd]?) #[1-9]+\d*/,
       "examples": [
         "Commit message contains one of:",
         "\tclose #[issue-number]",
@@ -105,18 +105,18 @@ How the default commit message settings look like
 
 | Property   | Type       | Description                                                      |
 | ---------- | ---------- | ---------------------------------------------------------------- |
-| validation | `string[]` | List of regular expressions with allowed branch names            |
+| validation | `RegExp[]` | List of regular expressions with allowed branch names            |
 | examples   | `string[]` | List of example branch names, will be logged if validation fails |
 
 How the default branch name settings look like
 
-```json
+```javascript
 {
   "commit": [],
   "branches": {
     "validation": [
-      "^(feature|bug|docs|hotfix)/(\\d+)-[a-z-]+",
-      "^wip/[a-z1-9]+[a-z0-9]*"
+      /^(feature|bug|docs|hotfix)\/(\d+)-[a-z-]+/,
+      /^wip\/[a-z1-9]+[a-z0-9]*/
     ],
     "examples": [
       "feature/[issue_number]-[subject]",

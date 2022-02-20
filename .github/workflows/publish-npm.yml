@@ -6,7 +6,7 @@ on:
 
 jobs:
   publish_github:
-    name: Publish To GitHub
+    name: Publish To NPM
     runs-on: ubuntu-latest
 
     steps:
